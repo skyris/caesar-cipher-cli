@@ -1,16 +1,17 @@
 const fs = require('fs');
+const printAndExit = require('./printAndExit');
 
 function writeToFileOrStdout(outputFile) {
-  if (outputFile) {
-  if (fs.existsSync(outputFile)) {
-    return fs.createWriteStream(outputFile, {flags: 'a'})
-  } else {
-      console.error(`Output file ${outputFile} does not exist!`)
-      process.exit(1)
-    }
-  } 
-  return process.stdout
-
+  if (!outputFile) {
+    return process.stdout;
+  }
+  try {
+    fs.accessSync(outputFile, fs.constants.W_OK);
+    return fs.createWriteStream(outputFile, {flags: 'a'});
+  } catch (error) {
+    printAndExit(error.message);
+  }
 }
+
 
 module.exports = writeToFileOrStdout;

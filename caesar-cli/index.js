@@ -2,16 +2,16 @@ const {pipeline} = require('stream');
 const argv = require('./argvParser');
 const readFromFileOrStdin = require('./readFromFileOrStdin');
 const writeToFileOrStdout = require('./writeToFileOrStdout');
+const caesarCipherTransform = require('./caesarCipherTransform');
+const printAndExit = require('./printAndExit');
 
 pipeline(
   readFromFileOrStdin(argv.input),
+  caesarCipherTransform(argv.shift, argv.action),
   writeToFileOrStdout(argv.output),
-  (err, value) => {
+  (err) => {
     if (err) {
-      console.error(err.message)
-      process.exit(1);
-    } else {
-      console.log('value: ', value);
+      printAndExit(err.message);
     }
   }
 )

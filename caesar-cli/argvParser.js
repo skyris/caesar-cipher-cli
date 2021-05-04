@@ -1,6 +1,6 @@
 const flags = process.argv.slice(2);
 const argv = {};
-for (let i = 0; i < flags.length; i+=2) {
+for (let i = 0; i < flags.length; i += 2) {
   switch(flags[i]) {
     case '-a':
     case '--action':
@@ -20,5 +20,6 @@ for (let i = 0; i < flags.length; i+=2) {
       break;
   }
 }
+
 
 module.exports = argv;
