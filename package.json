@@ -1,0 +1,23 @@
+{
+  "name": "Caesar Cipher cli",
+  "version": "1.0.0",
+  "description": "Console tool for text encoding/decoding by Caesar cipher. It gets as an input some text file or stdin and returns transformed text to another file or stdout.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "js",
+    "node"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/skyris/caesar-cipher-cli.git"
+  },
+  "author": "Victor Klimov <4klimov@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/skyris/caesar-cipher-cli/issues"
+  },
+  "homepage": "https://github.com/skyris/caesar-cipher-cli#readme"
+}
