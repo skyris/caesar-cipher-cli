@@ -15,8 +15,7 @@ You can omit options **input** or **output**. And in that case text will be rece
 
 **Usage:**
 1. Download or clone this repo
-2. Install dependencies ```$ npm install```
-3. Run ```$ node caesar_cli -a encode -s 7 -i "./your_input_file.txt" -o "./your_output_file.txt"```
+2. Run ```$ node caesar_cli -a encode -s 7 -i "./your_input_file.txt" -o "./your_output_file.txt"```
 
 
 **Usage example:**
